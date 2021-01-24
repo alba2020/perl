@@ -10,5 +10,4 @@ sub total {
     $sum;
 }
 
-my $s = &total(1..1000);
-print ("sum from 1 to 1000 = $s\n");
+print "sum from 1 to 1000 = ", total( 1 .. 1000 ), "\n";

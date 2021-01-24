@@ -5,13 +5,18 @@ use 5.010;
 
 sub greet {
     my ($name) = @_;
+
+    # my $name = shift;
+
     state $old;
 
-    if ( !$old ) {
-        print "Hi $name! You are the first one here!\n";
+    print "Hi $name! ";
+
+    if ( !defined $old ) {
+        print "You are the first one here!\n";
     }
     else {
-        print "Hi $name! $old is also here!\n";
+        print "$old is also here!\n";
     }
 
     $old = $name;

@@ -3,9 +3,9 @@
 # $r = 12.5;
 $pi = 3.141592654;
 
-print("enter radius: ");
-$r = <STDIN>;
+print("Enter radius: ");
+chomp( $r = <STDIN> );
 
-$l = 2 * $pi * $r;
+$circ = 2 * $pi * $r;
 
-print("length = $l\n");
+print("The circumference of a circle of radius $r is $circ\n");
