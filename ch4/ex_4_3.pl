@@ -12,13 +12,14 @@ sub total {
 }
 
 sub avg {
-    &total(@_) / @_;
+    if (@_ == 0) { return }
+    total(@_) / @_;
 }
 
 # print "avg(1, 2, 3, 4) = " . &avg(1, 2, 3, 4) . "\n";
 
 sub above_average {
-    my $avg = &avg(@_);
+    my $avg = avg(@_);
     my @res;
 
     foreach (@_) {

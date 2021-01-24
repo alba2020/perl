@@ -2,6 +2,8 @@
 
 # @lines = reverse <STDIN>;
 
-foreach (reverse <STDIN>) {
-  print;
-}
+# foreach (reverse <STDIN>) {
+#   print;
+# }
+
+print reverse <STDIN>;

@@ -1,10 +1,9 @@
 #!/usr/bin/perl
 
-@numbers = <STDIN>;
-
 @names = qw/ fred betty barney dino wilma pebbles bamm-bamm /;
 
+chomp( @numbers = <STDIN> );
+
 foreach (@numbers) {
-    $index = $_ - 1;
-    print "$names[$index]\n";
-  }
+    print "$names[$_ - 1]\n";
+}
